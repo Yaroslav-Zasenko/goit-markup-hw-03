@@ -6,10 +6,71 @@ body {
 
 ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 a {
     text-decoration: none;
+}
+
+.conteiner {
+    max-width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+}
+
+.header {
+    border-bottom: 1px solid #e7e9fc;
+}
+
+.header-conteiner {
+    display: flex;
+    align-items: center;
+}
+.header-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.header-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.address-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-logo {
+    padding: 24px 0;
+    margin-right: 76px;
 }
 
 .header-logo,
@@ -40,6 +101,8 @@ a {
 
 
 .header-link {
+    display: block;
+    padding: 24px 0;
     font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
@@ -53,9 +116,12 @@ a {
 
 .address {
     font-style: normal;
+    margin-left: auto;
 }
 
 .address-link {
+    display: block;
+    padding: 24px 0;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -72,13 +138,22 @@ a {
     background-color: #2e2f42;
 }
 
+.hero-container {
+    padding-bottom: 188px;
+    padding-top: 188px;
+}
+
 .hero-title {
     font-weight: 700;
-        font-size: 56px;
-        line-height: 1.07;
-        letter-spacing: 0.02em;
-        text-align: center;
-        color: #fff;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    max-width: 496px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
 }
 
 .hero-btn {
@@ -90,11 +165,33 @@ a {
     letter-spacing: 0.04em;
     color: #fff;
     cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
     background: #404bbf;
+}
+
+.features-list {
+    display: flex;
+    gap: 24px;
+}
+
+.features-item {
+    width: calc((100% - 72px) / 4);
+}
+
+.features-text {
+    margin-top: 8px;
 }
 
 .features-subtitle {
@@ -113,10 +210,11 @@ color: #434455;
 }
 
 
-.team{
+.team {
     background: #f4f4fd;
 }
-.team-title{
+.team-heading {
+    margin-bottom: 72px;
     font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
@@ -124,9 +222,39 @@ color: #434455;
         text-align: center;
         color: #2e2f42;
 }
-.team-item {
-    background: #fff;
+
+
+
+.team-list {
+    display: flex;
+    gap: 24px;
 }
+
+.team-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+        background: #fff;
+    gap: 8px;
+    padding: 32px 16px;
+}
+
+.team-item {
+    background #fff;
+    width: calc((100% - 72px) / 4);
+    
+    border-radius: 0 0 4px 4px;
+}
+
+.team-text {
+    text-align: center;
+}
+
+
+
+ 
 .team-subtitle{
     font-weight: 500;
         font-size: 20px;
@@ -153,6 +281,31 @@ line-height: 1.11;
 letter-spacing: 0.02em;
 text-align: center;
 color: #2e2f42;
+margin-bottom: 72px;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+}
+
+.portfolio-item {
+    width: calc((100% - 48px) / 3);
+}
+
+.portfolio-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+
+    border-bottom: 1px solid #e7e9fc;
+        border-left: 1px solid #e7e9fc;
+        border-right: 1px solid #e7e9fc;
+        padding: 32px 16px;
+        
 }
 
 .portfolio-subtitle {
@@ -171,7 +324,10 @@ color: #434455;
 }
 
 .footer {
-    background-color: #2e2f42;    
+    background-color: #2e2f42;   
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left:  156px;
 }
 .footer-text{
     font-weight: 400;
@@ -179,4 +335,6 @@ color: #434455;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #f4f4fd;
+        max-width: 264px;
+        margin-top: 16px;
 }
