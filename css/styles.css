@@ -181,6 +181,12 @@ a {
     background: #404bbf;
 }
 
+.features,
+.team,
+.portfolio {
+    padding: 120px 0;
+}
+
 .features-list {
     display: flex;
     gap: 24px;
@@ -242,7 +248,7 @@ color: #434455;
 }
 
 .team-item {
-    background #fff;
+    background: #fff;
     width: calc((100% - 72px) / 4);
     
     border-radius: 0 0 4px 4px;
@@ -327,7 +333,10 @@ color: #434455;
     background-color: #2e2f42;   
     padding-top: 100px;
     padding-bottom: 100px;
-    padding-left:  156px;
+}
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;
 }
 .footer-text{
     font-weight: 400;
